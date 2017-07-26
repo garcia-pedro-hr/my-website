@@ -1,6 +1,7 @@
 html, body, 
 .container,
-#background {
+#background,
+#loading-screen{
     width: 100%;
     height: 100%;
     left: 0;
@@ -42,15 +43,49 @@ div[id$="message"] {
     color: white;
 }
 
+.social-media-icon {
+    position: relative;
+    margin: 0 30px;
+    font-size: 40px;
+    color: white;
+    
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
 
+.social-media-icon:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -mz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+#social-media-panel {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+#loading-screen,
 #background {
     position: fixed;
+    display: block;
+    overflow: hidden;
+}
+
+#loading-screen {  
+    z-index: 999;
+    background-color: #101010;
+}
+
+#background {
     z-index: -1;
     
-    display: block;
-    background: url("/img/background.jpg");
-    overflow: hidden;
-    
+    background: url("/img/background.jpg");  
     background-color: rgba(0,0,0,.5);
     background-blend-mode: multiply;
     
@@ -66,3 +101,4 @@ div[id$="message"] {
     -o-transform: scale(1.005);
     transform: scale(1.005);
 }
+

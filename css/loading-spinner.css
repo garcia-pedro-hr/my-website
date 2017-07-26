@@ -1,0 +1,292 @@
+html {
+  background: #222;
+  color: #ccc;
+}
+
+#loading-screen div, :before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.assembly {
+  filter: drop-shadow(0 0 1px currentColor);
+  animation: down 2s linear infinite;
+}
+
+@keyframes down {
+  to {
+    transform: scale(0.5);
+  }
+}
+.hex {
+  z-index: -1;
+  margin: -4em;
+  width: 8em;
+  height: 8em;
+  /* shape it into rhombus */
+  transform: skewY(30deg) scaleX(0.86603);
+  /* make rhombus ends transparent, get hex */
+  background: linear-gradient(135deg, transparent 25%, currentColor 0, currentColor 75%, transparent 0);
+}
+
+.tri:before {
+  margin: 0 -2em;
+  border: solid 0;
+  border-color: currentColor transparent;
+  border-width: 3.4641em 2em 0;
+  animation: up 2s ease-out infinite;
+  content: '';
+}
+.tri:nth-child(1) {
+  transform: rotate(30deg) translateY(3.4641em);
+}
+.tri:nth-child(1):before {
+  animation-name: up-1;
+}
+@keyframes up-1 {
+  0%, 5.88235% {
+    transform: scale(0);
+  }
+  100%, 85.88235% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(2) {
+  transform: rotate(30deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(2):before {
+  animation-name: up-2;
+}
+@keyframes up-2 {
+  0%, 6.76471% {
+    transform: scale(0);
+  }
+  100%, 86.76471% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(3) {
+  transform: rotate(30deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(3):before {
+  animation-name: up-3;
+}
+@keyframes up-3 {
+  0%, 7.64706% {
+    transform: scale(0);
+  }
+  100%, 87.64706% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(4) {
+  transform: rotate(-30deg) translateY(3.4641em);
+}
+.tri:nth-child(4):before {
+  animation-name: up-4;
+}
+@keyframes up-4 {
+  0%, 8.52941% {
+    transform: scale(0);
+  }
+  100%, 88.52941% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(5) {
+  transform: rotate(-30deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(5):before {
+  animation-name: up-5;
+}
+@keyframes up-5 {
+  0%, 9.41176% {
+    transform: scale(0);
+  }
+  100%, 89.41176% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(6) {
+  transform: rotate(-30deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(6):before {
+  animation-name: up-6;
+}
+@keyframes up-6 {
+  0%, 10.29412% {
+    transform: scale(0);
+  }
+  100%, 90.29412% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(7) {
+  transform: rotate(-90deg) translateY(3.4641em);
+}
+.tri:nth-child(7):before {
+  animation-name: up-7;
+}
+@keyframes up-7 {
+  0%, 11.17647% {
+    transform: scale(0);
+  }
+  100%, 91.17647% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(8) {
+  transform: rotate(-90deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(8):before {
+  animation-name: up-8;
+}
+@keyframes up-8 {
+  0%, 12.05882% {
+    transform: scale(0);
+  }
+  100%, 92.05882% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(9) {
+  transform: rotate(-90deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(9):before {
+  animation-name: up-9;
+}
+@keyframes up-9 {
+  0%, 12.94118% {
+    transform: scale(0);
+  }
+  100%, 92.94118% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(10) {
+  transform: rotate(-150deg) translateY(3.4641em);
+}
+.tri:nth-child(10):before {
+  animation-name: up-10;
+}
+@keyframes up-10 {
+  0%, 13.82353% {
+    transform: scale(0);
+  }
+  100%, 93.82353% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(11) {
+  transform: rotate(-150deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(11):before {
+  animation-name: up-11;
+}
+@keyframes up-11 {
+  0%, 14.70588% {
+    transform: scale(0);
+  }
+  100%, 94.70588% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(12) {
+  transform: rotate(-150deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(12):before {
+  animation-name: up-12;
+}
+@keyframes up-12 {
+  0%, 15.58824% {
+    transform: scale(0);
+  }
+  100%, 95.58824% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(13) {
+  transform: rotate(-210deg) translateY(3.4641em);
+}
+.tri:nth-child(13):before {
+  animation-name: up-13;
+}
+@keyframes up-13 {
+  0%, 16.47059% {
+    transform: scale(0);
+  }
+  100%, 96.47059% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(14) {
+  transform: rotate(-210deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(14):before {
+  animation-name: up-14;
+}
+@keyframes up-14 {
+  0%, 17.35294% {
+    transform: scale(0);
+  }
+  100%, 97.35294% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(15) {
+  transform: rotate(-210deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(15):before {
+  animation-name: up-15;
+}
+@keyframes up-15 {
+  0%, 18.23529% {
+    transform: scale(0);
+  }
+  100%, 98.23529% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(16) {
+  transform: rotate(-270deg) translateY(3.4641em);
+}
+.tri:nth-child(16):before {
+  animation-name: up-16;
+}
+@keyframes up-16 {
+  0%, 19.11765% {
+    transform: scale(0);
+  }
+  100%, 99.11765% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(17) {
+  transform: rotate(-270deg) translateY(3.4641em) translate(2em, 3.4641em) rotate(0.5turn);
+}
+.tri:nth-child(17):before {
+  animation-name: up-17;
+}
+@keyframes up-17 {
+  0%, 20% {
+    transform: scale(0);
+  }
+  100%, 100% {
+    transform: scale(1);
+  }
+}
+.tri:nth-child(18) {
+  transform: rotate(-270deg) translateY(3.4641em) translate(4em, 0em) rotate(0turn);
+}
+.tri:nth-child(18):before {
+  animation-name: up-18;
+}
+@keyframes up-18 {
+  0%, 20.88235% {
+    transform: scale(0);
+  }
+  100%, 100.88235% {
+    transform: scale(1);
+  }
+}

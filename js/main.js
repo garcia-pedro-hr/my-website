@@ -1,32 +1,47 @@
 $(document).ready(function() {
-   new Typed('#typed1', {
+    setTimeout(function() {
+        $("link[href*='loading-spinner.css']").remove();
+        
+        $('#loading-screen').animate({
+           opacity: 0 
+        }, 500, function () {
+            $(this).remove();
+            triggerTypedMessages();
+        });
+    }, 1800);
+});
+
+function triggerTypedMessages () {
+    new Typed('#typed1', {
        stringsElement: '#typed1-message',
-       typeSpeed: 50,
+       typeSpeed: 30,
        fadeOut: true,
        backDelay: 3000,
        showCursor: false,
        onComplete: (self) => {
            new Typed('#typed2', {
                stringsElement: '#typed2-message',
-               typeSpeed: 50,
-               startDelay: 1000,
+               typeSpeed: 30,
+               startDelay: 750,
                fadeOut: true,
                backDelay: 3000,
                showCursor: false,
                onComplete: (self) => {
                    new Typed('#typed3', {
                        stringsElement: '#typed3-message',
-                       typeSpeed: 50,
-                       startDelay: 1000,
+                       typeSpeed: 30,
+                       startDelay: 750,
                        fadeOut: true,
                        backDelay: 3000,
                        showCursor: false,
                        onComplete: (self) => {
-                           // TODO
+                           $('#social-media-panel').animate({
+                               opacity: 1
+                           }, 2000);
                        }
                    });
                }
            });
        }
-   }); 
-});
+   });
+}
